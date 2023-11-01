@@ -2,20 +2,22 @@
 
 Enhancing our Power Platform utilization, secure implementations, adherence to PBMM commitments, and delivering digital efficiency within the organization fostering platform adoption
 
+The image below illustrates the range of M365 and Azure technologies underpinning our platform. These technologies, all based on SaaS or PaaS models, have been vetted for both non-production and production use. Their subscription-based licensing offers cost transparency and predictability, unlike IaaS's capacity-based model, which can be more challenging to forecast. With this service now fully integrated into our PBMM-compliant production environment, clients can expedite projects by leveraging existing functionalities for security, accessibility, and data integrity, rather than building these from the ground up. The adoption of this model enhances the visibility and security of application development. By establishing robust support and tooling, we enable the efficient creation of technical artifacts, driving platform adoption and reducing project failure risks. This approach decentralizes corporate knowledge, standardizes staff onboarding, and fosters a service line that aligns with industry and security standards. Furthermore, it streamlines management by centralizing efforts into a cohesive framework akin to SaaS solutions like Microsoft Teams.
+
 ![arch](https://lucid.app/publicSegments/view/cc2c6508-459e-49e6-9163-24bebbe462f4/image.jpeg)
 
 
 ## Problem Statement & Opportunity
 
-At the heart of our agency's mandate is the quest to evolve our IM/IT framework to meet and leverage the dynamic advances of technology and service delivery. Our journey thus far has been marked by diverse technological strategies, each contributing its distinct value. As we stand at this strategic vantage point, we are equipped with the opportunity to unify these varied efforts under the Power Platform—a SaaS solution that resonates with our strategic ambitions, promising enhanced cost efficiency and expenditure predictability.
+The agency is at a critical inflection point, tasked with enhancing its IM/IT landscape to meet the evolving demands of technology and service delivery. Historically, the agency has navigated its technological needs through a mosaic of approaches, each contributing value in its context. Now, we are presented with the opportunity to consolidate these efforts by adopting a unified SaaS solution with the Power Platform, which aligns with our strategic objectives and promises substantial cost efficiency and predictability in expenditures.
 
-Embracing the Power Platform is a reflection of a proactive digital strategy, one that recognizes the depth of our technological heritage while freeing us from its limitations. Integrated with our M365 and Azure ecosystems, the Power Platform offers a robust suite of capabilities, bolstered by comprehensive documentation and supported by Microsoft's Enterprise SLA. This allows us to reallocate our resources from the intricacies of IaaS management to our core mission—delivering superior international governance services.
+This platform is not just a new tool in our arsenal but a reflection of an evolving digital strategy that builds upon our rich history of technological diversity without being constrained by it. The Power Platform, part of our M365 and Azure services, provides robust capabilities and a wealth of documentation that supports our mandate. This strategic choice, managed under Microsoft's Enterprise SLA, allows us to divert the complexities of IaaS management to Microsoft's expertise, thereby concentrating on our primary mission of delivering superior international governance services.
 
-The Power Platform is meticulously crafted to be as facilitative as it is unobtrusive, mirroring the ethos of open-source platforms where resources are abundant and innovation thrives unrestricted by paywalls. With its intuitive self-service portal, the platform is designed for seamless adoption, echoing the ease with which Teams became an integral part of our operations. It stands poised to transform our application development and deployment paradigms, equipping us with a compliant, secure infrastructure that significantly trims deployment timelines.
+In the spirit of adopting solutions that are as supportive as they are unobtrusive, the Power Platform is designed to be a self-service portal that is intuitive and accessible. It mirrors the open-source ethos where development tools and libraries are freely available without a paywall, fostering an environment where the focus is on innovation, not on navigating procurement. This approach ensures that the transition to the Power Platform is seamless, akin to our seamless integration of Teams into our daily operations. It is set to revolutionize our application development and deployment practices, equip us with a secure, compliant infrastructure, and significantly reduce the time to deployment.
 
-The creation of a clear mandate within IM/IT for a dedicated development and support team is a strategic move that will govern the platform effectively. This team will oversee platform upgrades, integration of reusable modules, and alignment with Microsoft's wave releases, ensuring adherence to our stringent security protocols. The adoption model's success hinges on its accessibility, inviting divisions to embrace the platform, thereby digitizing and optimizing processes, minimizing technical debt, and simplifying regulatory compliance.
+Moreover, the establishment of a clear mandate within IM/IT to create a dedicated development and support team will be pivotal in governing the platform, its upgrades, and the seamless integration of reusable modules, ensuring that we are in step with Microsoft's wave releases and our stringent security standards. This, coupled with a model that promotes ease of access and minimal barriers to entry, will be key to driving adoption across the agency's divisions, optimizing and digitizing our processes in a way that reduces technical debt and simplifies compliance.
 
-This document lays out a proposed strategy that underlines the potential for cost savings and complexity reduction. It serves as a blueprint for a strategic realignment that will not only enhance our operational excellence but also reaffirm our commitment to delivering unparalleled governance services in an increasingly digital landscape.
+This document will detail the proposed strategy, emphasizing the potential savings, the reduction of complexity, and the optimization of our technical and process infrastructure. This is more than a technological upgrade—it is a strategic realignment that places us on the leading edge of operational excellence and positions us to continue delivering unparalleled governance services in an increasingly digital world.
 
 ## Purpose
 
@@ -50,8 +52,37 @@ This document lays out a proposed strategy that underlines the potential for cos
 - **Dedicated DevOps Environment**: The Power Platform Admin group should maintain a dedicated DevOps environment for sourcing control of the test suite automation and backlog tracking. The integration between DevOps and Power Platform allows for the auto-creation of DevOps work items, enabling the administration of backlogs using standard sprints and conventional backlog administration.
 - **Resource Maintenance**: To effectively maintain the processes outlined above, a small group of full-time employees (FTEs) or vendors is recommended. The process for maintaining these systems should be well-defined and standardized. This ensures that we can quickly integrate junior/intermediate developers with Power Platform experience into the group within a 30-day period (60 days initially). This process may include training materials and basic testing to validate the resource's capabilities, encompassing documentation in Markdown format, video content, and possibly in-person training sessions.
 
-### Process for vendor upgrades
+### Process & resource allocation for vendor upgrades
 
+```mermaid
+classDiagram
+  class PowerPlatformAdmin {
+    +Track Wave Releases
+    +Manage Governance Tool
+  }
+  class Developer {
+    +Maintain Preview Environments
+    +Execute Automated Tests
+  }
+  class QAEngineer {
+    +Design Automated Test Suites
+    +Validate Release Adherence
+  }
+  class ProjectManager {
+    +Oversee Upgrade Timelines
+    +Resource Allocation
+  }
+  class ITSupport {
+    +Issue Resolution
+    +Support Automatic Release Updates
+  }
+
+  PowerPlatformAdmin --> Developer : Directs
+  Developer --> QAEngineer : Collaborates
+  QAEngineer --> ITSupport : Assists
+  ProjectManager --> PowerPlatformAdmin : Coordinates
+  ProjectManager --> ITSupport : Manages
+```
 ```mermaid
 graph TB
   subgraph Vendor Product Upgrade Implementation Strategy & Process
@@ -121,7 +152,37 @@ graph TB
 - **Release Backlog**: The backlog for these activities should be managed using the Power Platform Admin components app, or a similar tool like Azure DevOps, to ensure that the backlog is governed and that processes are consistently followed.
 - **Empty Backlog Review**: In the event that a GOC/Enterprise component has an empty backlog and has been reviewed as part of the process, the empty backlog should still include a decision work item that justifies "no action." This review process might occur quarterly and should be relatively rare. It might depend on the current team's capacity/resources and the stability of the module.
 
-#### Process for Component
+### Process & resource allocation for Enterprise & GOC Components Upgrade and Support Strategy
+
+```mermaid
+classDiagram
+  class EnterpriseArchitect {
+    +Oversee Component Upgrades
+    +Align with Vendor Releases
+  }
+  class DevOpsSpecialist {
+    +Continuous Development
+    +Manage Release Environments
+  }
+  class SecurityExpert {
+    +Ensure Component Compliance
+    +Manage Module Inventory
+  }
+  class SupportAgent {
+    +Troubleshoot Module Issues
+    +Maintain Release Backlog
+  }
+  class DocumentationSpecialist {
+    +Curate Module Documentation
+    +Review Empty Backlog Decisions
+  }
+
+  EnterpriseArchitect --> DevOpsSpecialist : Directs
+  DevOpsSpecialist --> SecurityExpert : Collaborates
+  SecurityExpert --> SupportAgent : Supports
+  SupportAgent --> DocumentationSpecialist : Provides Input
+  EnterpriseArchitect --> DocumentationSpecialist : Reviews
+```
 
 ```mermaid
 graph TD
@@ -169,7 +230,37 @@ graph TD
 - **Release Notes**: Release notes should be readily available in Markdown (DocFX) format. This allows individual project development/build teams to download previews and GA releases at their discretion. However, production support for these releases is not in scope.
 - **Access Control**: Developers should not have sysadmin access to production without proper Power Platform Maker and Privileged Identity Management (PIM) access controls in place.
 
-### Process for App Support
+### Process & resource allocation for App Support
+
+```mermaid
+classDiagram
+  class ServiceDeskAgent {
+    +Immediate Ticket Response
+    +Triage Tickets
+  }
+  class SupportManager {
+    +Coordinate Vendor Collaboration
+    +Oversee Support Processes
+  }
+  class ApplicationDeveloper {
+    +Resolve Application Bugs
+    +Handle Environment Requests
+  }
+  class SecurityComplianceOfficer {
+    +Monitor Access Control
+    +Ensure Compliance with PIM
+  }
+  class VendorSupport {
+    +Provide Expertise
+    +Assist with Platform Layer Issues
+  }
+
+  ServiceDeskAgent --> SupportManager : Reports
+  SupportManager --> ApplicationDeveloper : Directs
+  ApplicationDeveloper --> SecurityComplianceOfficer : Collaborates
+  ServiceDeskAgent --> VendorSupport : Escalates
+  SupportManager --> VendorSupport : Coordinates
+```
 
 ```mermaid
 graph TB
@@ -238,3 +329,25 @@ graph TB
 - **Training Material**: Training material should be comprehensive and comprise documentation, videos, and in-person training sessions, all readily available without manual request through a dedicated portal. This material should be designed to equip individuals with the necessary skills and knowledge to effectively use Power Platform.
 - **Community of Excellence (CoE) Kit**: The implementation of CoE kit items can be selective, with core components being installed, and additional items considered as the organization matures. These kits help in improving the efficiency and effectiveness of Power Platform usage.
 - **Reference Material**: A library of reference material should be accessible to users. This material includes environment management apps and Power Platform CoE Hygiene resources to support various projects and initiatives.
+
+### Example team composition and interaction with vendor (MS) support
+```mermaid
+classDiagram
+  class PowerPlatformTeam {
+    +Platform Architects
+    +Security Experts
+    +Project Managers
+    +Developers
+    +QA Engineers
+  }
+  class Azure {
+    +Cloud Services
+  }
+  class M365 {
+    +Office 365 Services
+  }
+  PowerPlatformTeam --> Azure : Utilizes
+  PowerPlatformTeam --> M365 : Utilizes
+  Azure --> PowerPlatformTeam : Supports
+  M365 --> PowerPlatformTeam : Supports
+```
