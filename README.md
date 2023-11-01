@@ -1,6 +1,7 @@
 # Microsoft 365 Power Platform Services
 
 Enhancing our Power Platform utilization, secure implementations, adherence to PBMM commitments, and delivering digital efficiency within the organization fostering platform adoption
+<div style="width: 640px; height: 480px; margin: 10px; position: relative;"><iframe allowfullscreen frameborder="0" style="width:640px; height:480px" src="https://lucid.app/documents/embedded/ef8a2a71-86af-4dc1-bf15-333b86f3f519" id="gv~IUwDmJeiV"></iframe></div>
 
 ## Problem Statement & Opportunity
 
