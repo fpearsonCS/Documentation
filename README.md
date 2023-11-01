@@ -3,6 +3,8 @@
 Enhancing our Power Platform utilization, secure implementations, adherence to PBMM commitments, and delivering digital efficiency within the organization fostering platform adoption
 
 ![arch](https://lucid.app/publicSegments/view/187578a5-6549-4a50-8412-ee12c4335e51/image.png)
+[![Lucidchart](https://lucid.app/documents/embedded/3d6a41e8-f426-455b-b005-9d81288cdbbe "Lucidchart Diagram")](https://lucid.app/documents/embedded/3d6a41e8-f426-455b-b005-9d81288cdbbe)
+
 
 ## Problem Statement & Opportunity
 
