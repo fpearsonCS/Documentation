@@ -359,6 +359,6 @@ classDiagram
   Azure --> PowerPlatformServices : Supports
   M365 --> PowerPlatformServices : Supports
   PowerPlatformServices --> BusinessClients : Supports
-  PowerPlatformServices --> BusinessClients : Utilizes
+  BusinessClients --> PowerPlatformServices : Utilizes
   PowerPlatformServices --> Executive : Reports
 ```
