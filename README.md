@@ -1,4 +1,4 @@
-# Microsoft 365 Power Platform Services
+# Enterprise Microsoft 365 Power Platform Client Services
 
 Enhancing our Power Platform utilization, secure implementations, adherence to PBMM commitments, and delivering digital efficiency within the organization fostering platform adoption
 
@@ -9,7 +9,7 @@ The image below illustrates the range of M365 and Azure technologies underpinnin
 
 ## Problem Statement & Opportunity
 
-The agency is at a critical inflection point, tasked with enhancing its IM/IT landscape to meet the evolving demands of technology and service delivery. Historically, the agency has navigated its technological needs through a mosaic of approaches, each contributing value in its context. Now, we are presented with the opportunity to consolidate these efforts by adopting a unified SaaS solution with the Power Platform, which aligns with our strategic objectives and promises substantial cost efficiency and predictability in expenditures.
+The agency is at a critical inflection point, tasked with enhancing its IM/IT landscape to meet the evolving demands of technology and service delivery and in particular recent significant applications being implemented in production that require a more efficient and streamlined support model to support not only tickets but the evolution of the platform they are hosted on coupled with the reusable modules that have been developed strategically to help business clients acheive a significant baseline to meet GOC security, accessbility, usability and availability standards. Historically, the agency has navigated its technological needs through a mosaic of approaches, each contributing value in its context. Now, we are presented with the opportunity to consolidate these efforts by adopting a unified SaaS solution with the Power Platform, which aligns with our strategic objectives and promises substantial cost efficiency and predictability in expenditures.
 
 This platform is not just a new tool in our arsenal but a reflection of an evolving digital strategy that builds upon our rich history of technological diversity without being constrained by it. The Power Platform, part of our M365 and Azure services, provides robust capabilities and a wealth of documentation that supports our mandate. This strategic choice, managed under Microsoft's Enterprise SLA, allows us to divert the complexities of IaaS management to Microsoft's expertise, thereby concentrating on our primary mission of delivering superior international governance services.
 
@@ -334,20 +334,30 @@ graph TB
 ```mermaid
 classDiagram
   class PowerPlatformTeam {
-    +Platform Architects
-    +Security Experts
-    +Project Managers
-    +Developers
-    +QA Engineers
+    +Platform Architect (1.5)
+    +Security Expert (Temp)
+    +Tech Lead / Manager (1)
+    +Developers (junior & intermeidate) (2)
+    +QA Engineers (1)
   }
   class Azure {
     +Cloud Services
   }
+  class Executive {
+    +Director
+  }
   class M365 {
     +Office 365 Services
+  }
+  class BusinessClients {
+    +EDMSP
+    +App 2
+    +App 3
   }
   PowerPlatformTeam --> Azure : Utilizes
   PowerPlatformTeam --> M365 : Utilizes
   Azure --> PowerPlatformTeam : Supports
   M365 --> PowerPlatformTeam : Supports
+  PowerPlatformTeam --> BusinessClients : Supports
+  PowerPlatformTeam --> Executive : Reports
 ```
